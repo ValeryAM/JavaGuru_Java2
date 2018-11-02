@@ -1,11 +1,14 @@
-import db.Database;
-import db.MemoryDatabase;
-import services.AddAffairService;
-import services.GetToDoListService;
-import services.RemoveAffairService;
-import views.AddAffairView;
-import views.PrintToDoListView;
-import views.RemoveAffairView;
+package lv.javaguru.java2;
+
+
+import lv.javaguru.java2.services.AddAffairService;
+import lv.javaguru.java2.services.GetToDoListService;
+import lv.javaguru.java2.services.RemoveAffairService;
+import lv.javaguru.java2.views.AddAffairView;
+import lv.javaguru.java2.views.PrintToDoListView;
+import lv.javaguru.java2.views.RemoveAffairView;
+import lv.javaguru.java2.db.AffairRepository;
+import lv.javaguru.java2.db.MemoryDatabase;
 
 import java.util.Scanner;
 
@@ -18,7 +21,7 @@ public class ToDoListApplication {
         // 3. Print To-Do list to console
         // 4. Exit
 
-        Database database = new MemoryDatabase();
+        AffairRepository database = new MemoryDatabase();
 
         AddAffairService addAffairService = new AddAffairService(database);
         RemoveAffairService removeAffairService = new RemoveAffairService(database);

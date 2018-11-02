@@ -1,12 +1,11 @@
-package db;
+package lv.javaguru.java2.db;
 
-import domain.Affair;
-import domain.AffairStatus;
+import lv.javaguru.java2.domain.Affair;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface Database {
+public interface AffairRepository {
 
     void addAffair(Affair affair);
     boolean removeAffair(Affair affair);

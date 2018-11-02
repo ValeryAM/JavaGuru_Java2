@@ -1,15 +1,15 @@
-package services;
+package lv.javaguru.java2.services;
 
-import db.Database;
-import domain.Affair;
+import lv.javaguru.java2.db.AffairRepository;
+import lv.javaguru.java2.domain.Affair;
 
 import java.util.Optional;
 
 public class RemoveAffairService {
 
-    private Database database;
+    private AffairRepository database;
 
-    public RemoveAffairService(Database database) {
+    public RemoveAffairService(AffairRepository database) {
         this.database = database;
     }
 

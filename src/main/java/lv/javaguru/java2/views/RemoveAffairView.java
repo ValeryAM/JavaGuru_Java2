@@ -1,6 +1,6 @@
-package views;
+package lv.javaguru.java2.views;
 
-import services.RemoveAffairService;
+import lv.javaguru.java2.services.RemoveAffairService;
 
 import java.util.Scanner;
 
@@ -22,9 +22,9 @@ public class RemoveAffairView {
         boolean isRemoved = removeAffairService.remove(title);
 
         if (isRemoved) {
-            System.out.println("domain.Affair with title " + title + " has been found and removed from the list!");
+            System.out.println("main.java.lv.javaguru.java2.domain.Affair with title " + title + " has been found and removed from the list!");
         } else {
-            System.out.println("domain.Affair with title " + title + " has not been found and removed from the list!");
+            System.out.println("main.java.lv.javaguru.java2.domain.Affair with title " + title + " has not been found and removed from the list!");
         }
 
         System.out.println("Remove affair from To-Do list execution end!");

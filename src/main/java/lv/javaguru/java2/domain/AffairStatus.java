@@ -1,4 +1,4 @@
-package domain;
+package lv.javaguru.java2.domain;
 
 public enum AffairStatus {
 

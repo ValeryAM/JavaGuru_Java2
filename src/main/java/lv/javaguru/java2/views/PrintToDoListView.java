@@ -1,7 +1,7 @@
-package views;
+package lv.javaguru.java2.views;
 
-import domain.Affair;
-import services.GetToDoListService;
+import lv.javaguru.java2.domain.Affair;
+import lv.javaguru.java2.services.GetToDoListService;
 
 public class PrintToDoListView {
 
@@ -16,7 +16,7 @@ public class PrintToDoListView {
         System.out.println("Print To-Do list to console execution start!");
 
         for (Affair affair : service.getAllAffairs()) {
-            System.out.println(affair.getAffairTitle() + "[" + affair.getAffairDescription() + "]");
+            System.out.println(affair.getTitle() + "[" + affair.getDescription() + "]");
         }
 
         System.out.println("Print To-Do list to console execution end!");

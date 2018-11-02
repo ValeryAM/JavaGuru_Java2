@@ -1,7 +1,7 @@
-package views;
+package lv.javaguru.java2.views;
 
-import domain.AffairStatus;
-import services.AddAffairService;
+import lv.javaguru.java2.domain.AffairStatus;
+import lv.javaguru.java2.services.AddAffairService;
 
 import java.util.Scanner;
 
@@ -21,10 +21,10 @@ public class AddAffairView {
         String title = sc.nextLine();
         System.out.print("Enter affair description:");
         String description = sc.nextLine();
-        System.out.print("Enter affair deadline:");
-        String deadline = sc.nextLine();
+//        System.out.print("Enter affair deadline:");
+//        String deadline = sc.nextLine();
 
-        addAffairService.add(title, description, deadline, AffairStatus.NOT_STARTED);
+        addAffairService.add(title, description);
 
         System.out.println("Add affair to list execution end!");
         System.out.println();
