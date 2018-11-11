@@ -2,9 +2,11 @@ package lv.javaguru.java2.services;
 
 import lv.javaguru.java2.db.AffairRepository;
 import lv.javaguru.java2.domain.Affair;
+import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
+@Component
 public class RemoveAffairService {
 
     private AffairRepository database;

@@ -2,7 +2,9 @@ package lv.javaguru.java2.views;
 
 import lv.javaguru.java2.domain.Affair;
 import lv.javaguru.java2.services.GetToDoListService;
+import org.springframework.stereotype.Component;
 
+@Component
 public class PrintToDoListView {
 
     private GetToDoListService service;

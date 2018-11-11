@@ -1,16 +1,9 @@
 package lv.javaguru.java2.db.jdbc;
-/*
-package main.java.lv.javaguru.java2.database.jdbc;
 
-import lv.javaguru.java2.database.ProductRepository;
-import lv.javaguru.java2.domain.Product;
-
-public class ProductRepositoryImpl
-        extends lv.javaguru.java2.database.jdbc.JDBCRepository
-        implements ProductRepository {
- */
 import lv.javaguru.java2.db.AffairRepository;
 import lv.javaguru.java2.domain.Affair;
+import org.springframework.stereotype.Component;
+
 //import lv.javaguru.java2.db.jdbc.JDBCRepository;
 //import lv.javaguru.java2.db.AffairRepository;
 
@@ -21,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Component
 public class AffairRepositoryImpl
             extends JDBCRepository
             implements AffairRepository {

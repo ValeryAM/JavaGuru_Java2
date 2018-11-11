@@ -2,9 +2,11 @@ package lv.javaguru.java2.views;
 
 import lv.javaguru.java2.domain.AffairStatus;
 import lv.javaguru.java2.services.AddAffairService;
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 
+@Component
 public class AddAffairView {
 
     private AddAffairService addAffairService;

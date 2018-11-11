@@ -1,35 +1,36 @@
 package lv.javaguru.java2;
 
 
-import lv.javaguru.java2.services.AddAffairService;
-import lv.javaguru.java2.services.GetToDoListService;
-import lv.javaguru.java2.services.RemoveAffairService;
+import lv.javaguru.java2.config.SpringAppConfig;
+//import lv.javaguru.java2.services.AddAffairService;
+//import lv.javaguru.java2.services.GetToDoListService;
+//import lv.javaguru.java2.services.RemoveAffairService;
 import lv.javaguru.java2.views.AddAffairView;
 import lv.javaguru.java2.views.PrintToDoListView;
 import lv.javaguru.java2.views.RemoveAffairView;
-import lv.javaguru.java2.db.AffairRepository;
-import lv.javaguru.java2.db.MemoryDatabase;
+//import lv.javaguru.java2.db.AffairRepository;
+//import lv.javaguru.java2.db.jdbc.AffairRepositoryImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.Scanner;
 
 public class ToDoListApplication {
 
     public static void main(String[] args) {
-        // Use cases:
-        // 1. Add affair to list
-        // 2. Remove affair from list
-        // 3. Print To-Do list to console
-        // 4. Exit
 
-        AffairRepository database = new MemoryDatabase();
+//        AffairRepository database = new MemoryDatabase();
+//        AffairRepository database = new AffairRepositoryImpl();
 
-        AddAffairService addAffairService = new AddAffairService(database);
-        RemoveAffairService removeAffairService = new RemoveAffairService(database);
-        GetToDoListService getToDoListService = new GetToDoListService(database);
+//        AddAffairService addAffairService = new AddAffairService(database);
+//        RemoveAffairService removeAffairService = new RemoveAffairService(database);
+//        GetToDoListService getToDoListService = new GetToDoListService(database);
 
-        AddAffairView addAffairView = new AddAffairView(addAffairService);
-        RemoveAffairView removeAffairView = new RemoveAffairView(removeAffairService);
-        PrintToDoListView printToDoListView = new PrintToDoListView(getToDoListService);
+        ApplicationContext context = new AnnotationConfigApplicationContext(SpringAppConfig.class);
+
+        AddAffairView addAffairView = context.getBean(AddAffairView.class);
+        RemoveAffairView removeAffairView = context.getBean(RemoveAffairView.class);
+        PrintToDoListView printToDoListView = context.getBean(PrintToDoListView.class);
 
         while (true) {
             printProgramMenu();
