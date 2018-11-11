@@ -1,6 +1,5 @@
 package lv.javaguru.java2;
 
-
 import lv.javaguru.java2.config.SpringAppConfig;
 //import lv.javaguru.java2.services.AddAffairService;
 //import lv.javaguru.java2.services.GetToDoListService;
