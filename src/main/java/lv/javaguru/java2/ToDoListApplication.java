@@ -1,14 +1,9 @@
 package lv.javaguru.java2;
 
 import lv.javaguru.java2.config.SpringAppConfig;
-//import lv.javaguru.java2.services.AddAffairService;
-//import lv.javaguru.java2.services.GetToDoListService;
-//import lv.javaguru.java2.services.RemoveAffairService;
 import lv.javaguru.java2.views.AddAffairView;
 import lv.javaguru.java2.views.PrintToDoListView;
 import lv.javaguru.java2.views.RemoveAffairView;
-//import lv.javaguru.java2.db.AffairRepository;
-//import lv.javaguru.java2.db.jdbc.AffairRepositoryImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -17,13 +12,6 @@ import java.util.Scanner;
 public class ToDoListApplication {
 
     public static void main(String[] args) {
-
-//        AffairRepository database = new MemoryDatabase();
-//        AffairRepository database = new AffairRepositoryImpl();
-
-//        AddAffairService addAffairService = new AddAffairService(database);
-//        RemoveAffairService removeAffairService = new RemoveAffairService(database);
-//        GetToDoListService getToDoListService = new GetToDoListService(database);
 
         ApplicationContext context = new AnnotationConfigApplicationContext(SpringAppConfig.class);
 

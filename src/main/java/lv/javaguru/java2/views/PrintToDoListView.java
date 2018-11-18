@@ -1,7 +1,7 @@
 package lv.javaguru.java2.views;
 
 import lv.javaguru.java2.domain.Affair;
-import lv.javaguru.java2.services.GetToDoListService;
+import lv.javaguru.java2.services.get.GetToDoListService;
 import org.springframework.stereotype.Component;
 
 @Component

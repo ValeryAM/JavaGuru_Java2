@@ -4,9 +4,6 @@ import lv.javaguru.java2.db.AffairRepository;
 import lv.javaguru.java2.domain.Affair;
 import org.springframework.stereotype.Component;
 
-//import lv.javaguru.java2.db.jdbc.JDBCRepository;
-//import lv.javaguru.java2.db.AffairRepository;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -20,7 +17,7 @@ public class AffairRepositoryImpl
             implements AffairRepository {
 
         @Override
-        public void addAffair(Affair affair) {
+        public void save(Affair affair) {
             Connection connection = null;
             try {
                 connection = getConnection();

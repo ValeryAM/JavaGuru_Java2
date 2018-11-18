@@ -1,7 +1,8 @@
 package lv.javaguru.java2.views;
 
-import lv.javaguru.java2.domain.AffairStatus;
-import lv.javaguru.java2.services.AddAffairService;
+import lv.javaguru.java2.services.add.AddAffairService;
+import lv.javaguru.java2.services.add.AddAffairRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
@@ -9,11 +10,8 @@ import java.util.Scanner;
 @Component
 public class AddAffairView {
 
+    @Autowired
     private AddAffairService addAffairService;
-
-    public AddAffairView(AddAffairService addAffairService) {
-        this.addAffairService = addAffairService;
-    }
 
     public void execute() {
         System.out.println();
@@ -25,8 +23,8 @@ public class AddAffairView {
         String description = sc.nextLine();
 //        System.out.print("Enter affair deadline:");
 //        String deadline = sc.nextLine();
-
-        addAffairService.add(title, description);
+        AddAffairRequest request = new AddAffairRequest(title, description);
+        addAffairService.addAffair(request);
 
         System.out.println("Add affair to list execution end!");
         System.out.println();

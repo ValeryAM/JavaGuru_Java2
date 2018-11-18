@@ -1,5 +1,6 @@
 package lv.javaguru.java2.services;
 
+import lv.javaguru.java2.services.add.AddAffairService;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,13 +19,13 @@ public class AddAffairServiceTest {
     @Before
     public void init() {
         repositoryMock = new AffairRepositoryMock();
-        service = new AddAffairService(repositoryMock);
+//        service = new AddAffairService(repositoryMock);
     }
 
     @Test
     public void test() {
         assertFalse(repositoryMock.isAffairSaved());
-        service.add("title", "description");
+//        service.addAffair("title", "description");
         assertTrue(repositoryMock.isAffairSaved());
     }
 }

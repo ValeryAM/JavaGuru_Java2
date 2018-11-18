@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public abstract class JDBCRepository {
 
     private String jdbcUrl = "jdbc:mysql://localhost:3306/java2?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
-    private String driverClass = "com.mysql.jdbc.Driver";
+    private String driverClass = "com.mysql.cj.jdbc.Driver";
     private String userName = "root";
     private String password = "MySQLServer64";
 

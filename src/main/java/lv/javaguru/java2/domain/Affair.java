@@ -8,6 +8,20 @@ public class Affair {
 //    private String affairDeadline;
 //    private AffairStatus affairStatus;
 
+    public Affair() {
+    }
+
+    public Affair(Long id, String title, String description) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+    }
+
+    public Affair(String title) {
+        this.title = title;
+    }
+
+
     public Long getId() {
         return id;
     }

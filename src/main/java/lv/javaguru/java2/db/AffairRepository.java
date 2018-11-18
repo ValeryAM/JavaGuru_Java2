@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface AffairRepository {
 
-    void addAffair(Affair affair);
+    void save(Affair affair);
     boolean removeAffair(Affair affair);
 
     Optional<Affair> findAffairByTitle(String title);

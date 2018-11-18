@@ -11,7 +11,7 @@ public class MemoryDatabase implements AffairRepository {
     private List<Affair> affairs = new ArrayList<>();
 
     @Override
-    public void addAffair(Affair affair) {
+    public void save(Affair affair) {
         affairs.add(affair);
     }
 

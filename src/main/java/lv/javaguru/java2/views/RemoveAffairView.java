@@ -1,6 +1,6 @@
 package lv.javaguru.java2.views;
 
-import lv.javaguru.java2.services.RemoveAffairService;
+import lv.javaguru.java2.services.remove.RemoveAffairService;
 import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
