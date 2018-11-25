@@ -2,7 +2,6 @@ package lv.javaguru.java2.db.jdbc;
 
 import lv.javaguru.java2.db.AffairRepository;
 import lv.javaguru.java2.domain.Affair;
-import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Component
 public class AffairRepositoryImpl
             extends JDBCRepository
             implements AffairRepository {
