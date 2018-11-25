@@ -1,6 +1,9 @@
 package lv.javaguru.java2.views;
 
+import lv.javaguru.java2.services.remove.RemoveAffairRequest;
+import lv.javaguru.java2.services.remove.RemoveAffairResponse;
 import lv.javaguru.java2.services.remove.RemoveAffairService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
@@ -8,7 +11,10 @@ import java.util.Scanner;
 @Component
 public class RemoveAffairView {
 
+    @Autowired
     private RemoveAffairService removeAffairService;
+
+    private RemoveAffairResponse removeAffairResponse;
 
     public RemoveAffairView(RemoveAffairService removeAffairService) {
         this.removeAffairService = removeAffairService;
@@ -21,7 +27,9 @@ public class RemoveAffairView {
         System.out.print("Enter affair title:");
         final String title = sc.nextLine();
 
-        boolean isRemoved = removeAffairService.remove(title);
+        RemoveAffairRequest request = new RemoveAffairRequest(title);
+        removeAffairResponse = removeAffairService.removeAffair(request);
+        boolean isRemoved = removeAffairResponse.isSuccess();
 
         if (isRemoved) {
             System.out.println("main.java.lv.javaguru.java2.domain.Affair with title " + title + " has been found and removed from the list!");
