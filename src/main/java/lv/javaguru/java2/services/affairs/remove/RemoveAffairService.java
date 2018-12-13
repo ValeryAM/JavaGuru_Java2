@@ -1,9 +1,9 @@
-package lv.javaguru.java2.services.remove;
+package lv.javaguru.java2.services.affairs.remove;
 
 import lv.javaguru.java2.db.AffairRepository;
 import lv.javaguru.java2.domain.Affair;
-import lv.javaguru.java2.services.Error;
-import lv.javaguru.java2.services.remove.validation.RemoveAffairValidator;
+import lv.javaguru.java2.services.ToDoListError;
+import lv.javaguru.java2.services.affairs.remove.validation.RemoveAffairValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -20,7 +20,7 @@ public class RemoveAffairService {
     private RemoveAffairValidator validator;
 
     public RemoveAffairResponse removeAffair(RemoveAffairRequest request) {
-        List<Error> errors = validator.validate(request);
+        List<ToDoListError> errors = validator.validate(request);
         if (!errors.isEmpty()) {
             return new RemoveAffairResponse(errors);
         }

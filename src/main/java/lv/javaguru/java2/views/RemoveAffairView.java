@@ -1,8 +1,8 @@
 package lv.javaguru.java2.views;
 
-import lv.javaguru.java2.services.remove.RemoveAffairRequest;
-import lv.javaguru.java2.services.remove.RemoveAffairResponse;
-import lv.javaguru.java2.services.remove.RemoveAffairService;
+import lv.javaguru.java2.services.affairs.remove.RemoveAffairRequest;
+import lv.javaguru.java2.services.affairs.remove.RemoveAffairResponse;
+import lv.javaguru.java2.services.affairs.remove.RemoveAffairService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

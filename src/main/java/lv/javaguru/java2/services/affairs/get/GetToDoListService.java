@@ -1,4 +1,4 @@
-package lv.javaguru.java2.services.get;
+package lv.javaguru.java2.services.affairs.get;
 
 import lv.javaguru.java2.db.AffairRepository;
 import lv.javaguru.java2.domain.Affair;

@@ -1,9 +1,5 @@
 package lv.javaguru.java2.services;
 
-import lv.javaguru.java2.services.add.AddAffairService;
-import org.junit.Before;
-import org.junit.Test;
-
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
